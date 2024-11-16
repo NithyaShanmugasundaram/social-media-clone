@@ -4,8 +4,8 @@ import {auth} from "@/auth"
 
 
 export default async function Home() {
-  const session= auth();
-  console.log({session})
+  const session = await auth();
+  console.log(await auth())
   return (
     <>
     <form action={actions.signIn}>
